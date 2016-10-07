@@ -20,7 +20,7 @@ test/
 .travis.yml
 circle.yml
 setup.sh
-Gruntfile.js
+# Gruntfile.js
 _tslint.json
 
 test-results.xml
