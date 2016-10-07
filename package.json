@@ -9,7 +9,7 @@
   "scripts": {
     "build": "grunt default",
     "test": "grunt test",
-    "postinstall": "grunt default"
+    "postinstall": "tsc"
   },
   "keywords": [
     "TypeScript"
