@@ -21,7 +21,7 @@ test/
 circle.yml
 setup.sh
 # Gruntfile.js
-_tslint.json
+# _tslint.json
 
 test-results.xml
 npm-debug.log
