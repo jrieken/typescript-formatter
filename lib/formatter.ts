@@ -8,11 +8,19 @@ class LanguageServiceHost implements ts.LanguageServiceHost {
         this.files[fileName] = ts.ScriptSnapshot.fromString(text);
     }
 
+    fileExists(path: string): boolean {
+        return !!this.files[path];
+    }
+
+    readFile(path: string): string | undefined {
+        return this.files[path]?.getText(0, this.files[path]!.getLength());
+    }
+
     // for ts.LanguageServiceHost
 
     getCompilationSettings = () => ts.getDefaultCompilerOptions();
     getScriptFileNames = () => Object.keys(this.files);
-    getScriptVersion = (_fileName: string) => "0";
+    getScriptVersion = (_fileName: string) => '0';
     getScriptSnapshot = (fileName: string) => this.files[fileName];
     getCurrentDirectory = () => process.cwd();
     getDefaultLibFileName = (options: ts.CompilerOptions) => ts.getDefaultLibFilePath(options);
