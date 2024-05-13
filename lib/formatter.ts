@@ -20,7 +20,7 @@ class LanguageServiceHost implements ts.LanguageServiceHost {
 
     getCompilationSettings = () => ts.getDefaultCompilerOptions();
     getScriptFileNames = () => Object.keys(this.files);
-    getScriptVersion = (_fileName: string) => '0';
+    getScriptVersion = (_fileName: string) => "0";
     getScriptSnapshot = (fileName: string) => this.files[fileName];
     getCurrentDirectory = () => process.cwd();
     getDefaultLibFileName = (options: ts.CompilerOptions) => ts.getDefaultLibFilePath(options);
